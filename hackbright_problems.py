@@ -66,13 +66,28 @@ def split(str, splitter):
         new.append(str[start:])
     return new
 
-# linked lists
+def reverse_string(word):
+    new = ""
+    for char in word:
+        new = char + new
+    return new
 
-class node(object):
-    def __init__(self, data):
-        self.data
+def rev_words(phrase):
+    new = ""
+    stub = ""
+    num = len(phrase)
+    for i in xrange(num-1, -1, -1):
+        print i, phrase[i], stub, new
+        if phrase[i] == " ":
+            new += phrase[i]
+        else:
+            stub = phrase[i] + stub
+            if phrase[i-1] == " " or i==0:
+                new += stub
+                stub = ""
+    return new
 
-[]
+
 ["cat", "hat", "bat"], "hat"
 ["blue","red","yellow","black","white","orange","green"]
 "porcupine"
